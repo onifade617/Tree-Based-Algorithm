@@ -23,7 +23,7 @@ fig, ax = plt.subplots()
 
 ax.plot(pos_fraction, gini)
 
-ax.set_ylim(0, 1)
+
 ax.set_xlabel('Positive fraction')
 
 ax.set_ylabel('Gini impurity')
@@ -31,8 +31,8 @@ ax.set_ylabel('Gini impurity')
 
 
 # Plot data
-ax.plot(pos_fraction, gini, marker='o', linestyle='-')
-
+ax.plot(pos_fraction, gini)
+ax.set_ylim(0, 1)
 # Set labels and limits
 
 #ax.set_xlabel('Positive fraction')

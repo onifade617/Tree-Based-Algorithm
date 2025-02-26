@@ -49,12 +49,11 @@ def gini_impurity(labels):
     fractions = counts / float(len(labels))
         
     return 1 - np.sum(fractions ** 2)
-
-st.subtitle("Moderately Heterogeneous")
+st.write("Moderately Heterogeneous")
 st.write(f'{gini_impurity([1, 1, 0, 1, 0]):.4f}')
 
-st.subtitle("Highly Heterogeneous")
+st.write("Highly Heterogeneous")
 st.write(f'{gini_impurity([1, 1, 0, 1, 0, 0]):.4f}')
 
-st.subtitle("Highly Homogeneous")
+st.write("Highly Homogeneous")
 st.write(f'{gini_impurity([1, 1, 1, 1]):.4f}')

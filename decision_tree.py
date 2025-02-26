@@ -57,3 +57,15 @@ st.write(f'{gini_impurity([1, 1, 0, 1, 0, 0]):.4f}')
 
 st.write("Highly Homogeneous")
 st.write(f'{gini_impurity([1, 1, 1, 1]):.4f}')
+
+
+st.title("Entropy")
+pos_fraction = np.linspace(0.001, 0.999, 1000)
+ent = -(pos_fraction * np.log2(pos_fraction) + (1 - pos_fraction) * np.log2(1 - pos_fraction))
+
+fig1, ax1 = plt.subplots()
+ax1.plot(pos_fraction, ent)
+ax1.set_xlabel('Positive fraction')
+ax1.set_ylabel('Entropy')
+ax1.set_ylim(0, 1)
+st.pyplot(fig1)

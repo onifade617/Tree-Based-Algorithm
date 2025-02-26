@@ -69,3 +69,19 @@ ax1.set_xlabel('Positive fraction')
 ax1.set_ylabel('Entropy')
 ax1.set_ylim(0, 1)
 st.pyplot(fig1)
+
+def entropy(labels):
+    if len(labels) == 0:
+        return 0
+    counts = np.unique(labels, return_counts=True)[1]
+    fractions = counts / float(len(labels))
+    return - np.sum(fractions * np.log2(fractions))
+
+st.write("low entropy")
+st.write(f'{entropy([1, 1, 0, 1, 0]):.4f}')
+
+st.write("high entropy")
+st.write(f'{entropy([1, 1, 0, 1, 0, 0]):.4f}')
+
+st.write("negativw entropy")
+st.write(f'{entropy([1, 1, 1, 1]):.4f}')

@@ -45,8 +45,8 @@ st.pyplot(fig)
 def gini_impurity(labels):
     if len(labels) == 0:
         return 0
-        counts = np.unique(labels, return_counts=True)[1]
-        fractions = counts / float(len(labels))
+    counts = np.unique(labels, return_counts=True)[1]
+    fractions = counts / float(len(labels))
         
     return 1 - np.sum(fractions ** 2)
 

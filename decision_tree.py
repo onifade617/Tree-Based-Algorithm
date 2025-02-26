@@ -83,5 +83,5 @@ st.write(f'{entropy([1, 1, 0, 1, 0]):.4f}')
 st.write("high entropy")
 st.write(f'{entropy([1, 1, 0, 1, 0, 0]):.4f}')
 
-st.write("negativw entropy")
+st.write("negative entropy")
 st.write(f'{entropy([1, 1, 1, 1]):.4f}')

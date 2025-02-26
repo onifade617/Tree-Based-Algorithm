@@ -24,9 +24,9 @@ fig, ax = plt.subplots()
 ax.plot(pos_fraction, gini)
 
 ax.set_ylim(0, 1)
-ax.xlabel('Positive fraction')
+ax.set_xlabel('Positive fraction')
 
-ax.ylabel('Gini impurity')
+ax.set_ylabel('Gini impurity')
 
 
 

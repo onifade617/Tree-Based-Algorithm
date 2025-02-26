@@ -39,3 +39,19 @@ ax.plot(pos_fraction, gini, marker='o', linestyle='-')
 #ax.set_ylabel('Gini impurity')
 #ax.set_title('Gini Impurity vs Positive Fraction')
 st.pyplot(fig)
+
+
+
+def gini_impurity(labels):
+    if len(labels) == 0:
+        return 0
+        counts = np.unique(labels, return_counts=True)[1]
+        fractions = counts / float(len(labels))
+        
+    return 1 - np.sum(fractions ** 2)
+
+st.write(f'{gini_impurity([1, 1, 0, 1, 0]):.4f}')
+
+st.write(f'{gini_impurity([1, 1, 0, 1, 0, 0]):.4f}')
+
+st.write(f'{gini_impurity([1, 1, 1, 1]):.4f}')

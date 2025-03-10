@@ -85,3 +85,17 @@ st.write(f'{entropy([1, 1, 0, 1, 0, 0]):.4f}')
 
 st.write("negative entropy")
 st.write(f'{entropy([1, 1, 1, 1]):.4f}')
+
+
+def split_node(X, y, index, value):
+    x_index = X[:, index]
+# if this feature is numerical
+    if X[0, index].dtype.kind in ['i', 'f']:
+        mask = x_index >= value
+    else:
+        mask = x_index == value
+# split into left and right child
+    left = [X[~mask, :], y[~mask]]
+    right = [X[mask, :], y[mask]]
+    return left, right
+

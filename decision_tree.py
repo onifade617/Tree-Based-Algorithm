@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Feb 26 14:53:01 2025
-
-@author: Awarri User
+Created on Wed Feb 26 14:53:01 
 """
 
 import streamlit as st
